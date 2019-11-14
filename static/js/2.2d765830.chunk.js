@@ -4149,8 +4149,8 @@
           ? 0 === i.type
           : !r &&
             2 < t.length &&
-            ("o" === t[0] || "O" === t[0]) &&
-            ("n" === t[1] || "N" === t[1])) ||
+              ("o" === t[0] || "O" === t[0]) &&
+              ("n" === t[1] || "N" === t[1])) ||
           ((function(e, t, n, r) {
             if (
               null === t ||
@@ -6763,8 +6763,7 @@
           ? e.shouldComponentUpdate(r, a, l)
           : !t.prototype ||
               !t.prototype.isPureReactComponent ||
-              !ni(n, r) ||
-              !ni(i, a);
+              !ni(n, r) || !ni(i, a);
       }
       function Pa(e, t, n) {
         var r = !1,
