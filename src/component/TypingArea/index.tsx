@@ -20,11 +20,9 @@ let beginTime: null | Moment = null;
 const TypingArea: FunctionComponent<ITypingAreaProps> = memo(props => {
   const [disabled, setDisabled] = useState(true);
   const handleKeyDown = (e: KeyboardEvent) => {
-    console.log(e.code);
     if (e.code === "Enter") {
       setDisabled(false);
       beginTime = moment();
-      console.log(beginTime);
     } else if (e.code === "Escape") {
       setDisabled(true);
     }
@@ -33,7 +31,6 @@ const TypingArea: FunctionComponent<ITypingAreaProps> = memo(props => {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   });
-  console.log("rendered");
   const { paragraph } = props;
   const [correct, setCorrect] = useState(0);
   const wordList = useMemo(
