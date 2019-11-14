@@ -3,14 +3,12 @@ import moment, { Moment } from "moment";
 
 export interface IScoreProps {
   correct: number;
-  wrong: number;
-  total: number;
   disabled?: boolean;
   beginTime: null | Moment;
 }
 
 const Score: FunctionComponent<IScoreProps> = props => {
-  const { correct, wrong, total, beginTime, disabled } = props;
+  const { correct, beginTime, disabled } = props;
 
   const [duration, setDuration] = useState(0);
 

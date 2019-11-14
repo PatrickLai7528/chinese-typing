@@ -40,13 +40,7 @@ const TypingArea: FunctionComponent<ITypingAreaProps> = memo(props => {
   return (
     <div className={"typing-area"}>
       <h1>Enter開始、ESC結束</h1>
-      <Score
-        correct={correct}
-        wrong={0}
-        total={100}
-        beginTime={beginTime}
-        disabled={disabled}
-      />
+      <Score correct={correct} beginTime={beginTime} disabled={disabled} />
       <WordList
         wordList={wordList}
         onCorrect={() => setCorrect(correct + 1)}
