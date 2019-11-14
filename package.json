@@ -2,6 +2,7 @@
   "name": "chinese-typing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://patricklai7528.github.io/chinese-typing",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged",
